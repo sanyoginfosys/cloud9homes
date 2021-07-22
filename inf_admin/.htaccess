@@ -1,0 +1,15 @@
+Options None
+Options +FollowSymLinks
+
+RewriteEngine on
+
+RewriteCond %{SERVER_PORT} 80 
+RewriteRule ^(.*)$ https://www.cloud9homes.com.au/inf_admin/$1 [R=301,L,NE]
+
+#RewriteRule invoice/(.*)/ invoice.php?inv=$1
+#RewriteRule invoice/(.*) invoice.php?inv=$1
+
+ErrorDocument 404 https://www.cloud9homes.com.au/inf_admin/404
+
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [QSA,L]

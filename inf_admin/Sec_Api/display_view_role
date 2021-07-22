@@ -1,0 +1,5 @@
+<?php
+
+$uniqueid = $_POST['uniqueid'];
+include_once('../base/functions.php');
+Check_UserPermission($uniqueid);

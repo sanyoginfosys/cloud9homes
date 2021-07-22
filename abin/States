@@ -1,0 +1,39 @@
+$conn1 = new mysqli("loaclhost", "root", "", "australia_db");
+
+
+
+STATES:
+
+New South Wales (NSW), 						https://www.yellowpages.com.au/nsw/localities-a1
+Queensland (Qld), 							https://www.yellowpages.com.au/qld/localities-a1
+South Australia (SA), 						https://www.yellowpages.com.au/sa/localities-a1
+Tasmania (Tas), 							https://www.yellowpages.com.au/tas/localities-a1
+The Australian Capital Territory (ACT),		
+The Northern Territory (NT),				https://www.yellowpages.com.au/nt/localities-a1
+Victoria (Vic), 							https://www.yellowpages.com.au/vic/localities-a1
+Western Australia (WA), 					https://www.yellowpages.com.au/wa/localities-a1
+
+
+
+
+user_id
+user_first_name
+user_last_name
+user_email
+user_username
+user_password
+user_confirm_password
+user_mobilenumber
+user_gender
+user_birth_date
+user_photo
+user_marital_status
+user_nationality
+user_address
+user_city
+user_postalcode
+user_country
+user_date_of_registration (Timestamp)
+user_registration_ip
+user_last_login
+user_last_login_ip

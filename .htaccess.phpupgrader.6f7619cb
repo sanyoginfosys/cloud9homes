@@ -1,0 +1,27 @@
+Options None
+Options +FollowSymLinks
+
+RewriteEngine on
+
+#RewriteCond %{SERVER_PORT} 80 
+#RewriteRule ^(.*)$ www.cloud9homes.com.au/$1 [R=301,L,NE]
+
+#ErrorDocument 404 http://www.cloud9homes.com.au/404
+
+
+
+# Custom Rule for Property __BEGINS__
+RewriteRule property/(.*)/ property.php?property_slug=$1
+RewriteRule property/(.*) property.php?property_slug=$1
+# Custom Rule for Property __ENDS__
+
+
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [QSA,L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php70” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php70 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
